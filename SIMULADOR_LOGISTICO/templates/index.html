@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulador Logístico</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1>Calcular Rota</h1>
+    <input type="number" id="start_id" placeholder="ID de Origem">
+    <input type="number" id="end_id" placeholder="ID de Destino">
+    <button onclick="calculateRoute()">Calcular</button>
+    <div id="map" style="height: 500px; width: 80%; margin: 20px;"></div>
+
+    <script>
+        let map = L.map('map').setView([-23.5505, -46.6333], 10);  // Coordenadas iniciais (ex: SP)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        async function calculateRoute() {
+            const startId = document.getElementById('start_id').value;
+            const endId = document.getElementById('end_id').value;
+
+            const response = await fetch('http://localhost:5800/calculate-route', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ start_id: startId, end_id: endId })
+            });
+
+            const data = await response.json();
+
+            if (data.error) {
+                alert(data.error);
+                return;
+            }
+
+            // Limpa o mapa
+            map.eachLayer(layer => layer.remove());
+
+            // Adiciona marcadores e rota
+            data.route.forEach(loc => {
+                const coords = loc.coordinates.split(';')[1].replace('POINT(', '').replace(')', '').split(' ');
+                L.marker([coords[1], coords[0]]).addTo(map).bindPopup(loc.name);
+            });
+
+            const routeCoords = data.route.map(loc => {
+                const coords = loc.coordinates.split(';')[1].replace('POINT(', '').replace(')', '').split(' ');
+                return [coords[1], coords[0]];
+            });
+
+            L.polyline(routeCoords, { color: 'blue' }).addTo(map);
+            map.fitBounds(routeCoords);
+        }
+    </script>
+</body>
+</html>

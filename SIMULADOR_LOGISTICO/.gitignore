@@ -1,0 +1,17 @@
+# Pastas de ambiente virtual e cache
+venv/
+__pycache__/
+.env
+
+# Arquivos do sistema e IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Banco de dados local
+*.sqlite
+*.db
+
+# Logs e arquivos temporários
+*.log
+*.tmp
