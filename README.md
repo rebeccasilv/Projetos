@@ -29,9 +29,13 @@ Como você pode contribuir?
 Se você curte resolver quebra-cabeças de código ou só quer trocar uma ideia sobre algum projeto, é só me chamar. Pode abrir uma Issue, mandar uma mensagem ou até sugerir melhorias direto nos projetos.
 
 Minhas portas estão abertas para:
+
 ✅ Sugestões de melhorias
+
 ✅ Soluções criativas para problemas bizarros
+
 ✅ Feedbacks sinceros (pode meter o dedo na ferida!)
+
 ✅ Parcerias para projetos futuros
 
 Curioso? 👽
