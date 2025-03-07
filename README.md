@@ -2,6 +2,7 @@
 Seja bem-vindo ao meu repositório de projetos! 🚀
 
 Aqui você vai encontrar de tudo um pouco:
+
 ✨ Projetos que me dediquei de verdade
 🧪 Experimentos e testes malucos
 🛠️ Ideias inacabadas (mas cheias de potencial!)
