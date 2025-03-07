@@ -1,4 +1,5 @@
 🗂️ Projetos - Meu Laboratório de Ideias 💡
+
 Seja bem-vindo ao meu repositório de projetos! 🚀
 
 Aqui você vai encontrar de tudo um pouco:
@@ -11,16 +12,20 @@ Aqui você vai encontrar de tudo um pouco:
 
 🚧 Coisas que deram errado, mas me ensinaram muito
 
-Por que eu criei esse espaço?
+Por que eu criei esse espaço?]
+
 Sabe aquela pasta escondida no seu computador, cheia de projetos que começaram com empolgação e terminaram com uma aba aberta no Stack Overflow? Pois é. Resolvi abrir essa pasta para o mundo!
 
 Meu objetivo com esse repositório é:
 
 Mostrar minha evolução (sem filtro!)
+
 Compartilhar ideias, mesmo as inacabadas
+
 Conectar com outras pessoas curiosas, que talvez vejam soluções onde eu só enxerguei bugs
 
 Quer fuçar? Eu deixo! 👀
+
 Sinta-se à vontade para explorar os códigos, dar uma espiada nos commits mais loucos e, principalmente, entrar em contato comigo se tiver ideias, sugestões ou quiser me ajudar a destravar algum projeto empacado.
 
 Nem todo código aqui é perfeito — e essa é a graça.
