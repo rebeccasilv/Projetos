@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📋 Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Minha Lista de Tarefas</h1>
+            <p>Organize suas atividades de forma simples e eficiente</p>
+        </header>
+
+        <!-- Formulário para adicionar nova tarefa -->
+        <section class="add-task-section">
+            <form id="taskForm" class="task-form">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="title" 
+                        placeholder="Título da tarefa *" 
+                        required
+                        maxlength="100"
+                    >
+                </div>
+                <div class="form-group">
+                    <textarea 
+                        id="description" 
+                        placeholder="Descrição (opcional)"
+                        rows="3"
+                        maxlength="500"
+                    ></textarea>
+                </div>
+                <div class="form-group">
+                    <select id="category">
+                        <option value="Geral">📁 Geral</option>
+                        <option value="Trabalho">💼 Trabalho</option>
+                        <option value="Estudo">📚 Estudo</option>
+                        <option value="Pessoal">👤 Pessoal</option>
+                        <option value="Saúde">🏥 Saúde</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">
+                    ➕ Adicionar Tarefa
+                </button>
+            </form>
+        </section>
+
+        <!-- Filtros -->
+        <section class="filters">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pendente">Pendentes</button>
+            <button class="filter-btn" data-filter="concluida">Concluídas</button>
+        </section>
+
+        <!-- Lista de tarefas -->
+        <section class="tasks-section">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                Carregando tarefas...
+            </div>
+            <div id="tasksContainer" class="tasks-container">
+                <!-- Tarefas serão inseridas aqui via JavaScript -->
+            </div>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <div class="empty-icon">📝</div>
+                <h3>Nenhuma tarefa encontrada</h3>
+                <p>Comece adicionando sua primeira tarefa!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
